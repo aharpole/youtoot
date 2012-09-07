@@ -5,5 +5,6 @@ http.createServer(function(request,response) {
 	response.writeHead(302, {
 		'Location': 'http://twitter.com/intent/tweet?text=Check%20Out%20This%20Video&url=' + encodeURIComponent(referrer)
 	});
+	console.log("Making tweet to video "+referrer);
 	response.end();
 }).listen(port);
